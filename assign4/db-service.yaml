@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: db
+spec:
+  selector:
+    pro: database
+  ports:
+  - protocol: TCP
+    # port of this service
+    port: 5432
+    # port of the pods
+    targetPort: 5432

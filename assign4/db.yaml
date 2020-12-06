@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: database-nurbek
+  labels:
+    pro: database
+spec:
+  containers:
+  - name: database
+    image: postgres:9.4
+    env:
+    - name: POSTGRES_USER
+      value: postgres
+    - name: POSTGRES_PASSWORD
+      value: postgres
+    ports:
+    - containerPort: 5432
